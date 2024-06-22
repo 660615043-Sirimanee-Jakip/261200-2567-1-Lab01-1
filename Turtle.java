@@ -42,24 +42,32 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
     public static void main(String[] a)
     {
         Turtle bob = new Turtle();
-        
+
         bob.penColor("blue");
         bob.width(5);
         bob.speed(2);
-
-        for (int i = 0; i <250 ; i++) {
-            bob.forward(i/25.);
-            bob.width(i*0.1);
-            bob.left(5);
-            if (i%10==0)
-                bob.dot("red",i*0.2);
-            if (i%5==0)
-                bob.penColor("orange");
-            else if (i%5 == 1)
-                bob.penColor("yellow");
-            else
-                bob.penColor("green");
-        }
+        bob.forward(50);
+        bob.right(90);
+        bob.forward(50);
+        bob.right(135);
+        bob.forward(70);
+        bob.right(45);
+        bob.up();
+        bob.forward(70);
+        bob.down();
+        bob.forward(70);
+        bob.left(90);
+        bob.forward(70);
+        bob.left(90);
+        bob.forward(70);
+        bob.left(90);
+        bob.forward(70);
+        bob.up();
+        bob.forward(70);
+        bob.down();
+        for (int i=0; i<360; i++){
+            bob.forward(1);
+            bob.left(1);
         }
         // bob.saveGCODE("test.gcode");
     }
